@@ -4,7 +4,7 @@ env:
   parameter-store:
     DOCKER_REGISTRY_USERNAME: /myapp/docker/username
     DOCKER_REGISTRY_PASSWORD: /myapp/docker/password
-    DOCKER_REGISTRY_URL: /myapp/docker-registry/url
+    
 
 phases:
   install:
@@ -18,7 +18,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Docker Registry...
-      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
+      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
       - IMAGE_REPO_NAME="tws-online-shop-app-demo"
       - IMAGE_NAME="$DOCKER_REGISTRY_USERNAME/$IMAGE_REPO_NAME"
 
