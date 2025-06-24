@@ -14,8 +14,8 @@ export function Navbar() {
         <nav className="navbar sticky-top">
             <Container className="d-flex justify-content-between align-items-center">
                 <NavLink to="/" className="navbar-brand">
-                    <img src="/imgs/logo.svg" alt="Logo" width="30" height="30" />Ducat
-                    <span className="text-primary text-color">DevOps</span>
+                    <img src="/imgs/logo.svg" alt="Logo" width="30" height="30" />PNET
+                    <span className="text-primary text-color">Cloud</span>
                 </NavLink>
 
                 <div className="d-flex align-items-center gap-3">
